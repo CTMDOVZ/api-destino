@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-const uuid = require('uuid'); // Generar IDs únicos
+
 
 const DESTINOS_TABLE = process.env.DESTINOS_TABLE;
 
@@ -19,7 +19,7 @@ exports.handler = async (event) => {
 
         // Crear el ítem de destino con un ID único
         const item = {
-            id_destino: uuid.v4(),
+            id_destino: body.id_destino,
             ciudad: body.ciudad,
             pais: body.pais,
             descripcion: body.descripcion || 'Descripción no proporcionada',
