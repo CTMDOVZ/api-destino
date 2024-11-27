@@ -6,7 +6,7 @@ const DESTINOS_TABLE = process.env.DESTINOS_TABLE;
 
 exports.handler = async (event) => {
     try {
-        // Obtener los datos del destino desde el cuerpo de la solicitud
+        // Obtener los datos del destino desddde el cuerpo de la solicitud
         const body = JSON.parse(event.body);
 
         // Validar que los datos requeridos estén presentes
