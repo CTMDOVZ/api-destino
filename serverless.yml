@@ -3,7 +3,7 @@ service: api-destino
 
 provider:
   name: aws
-  runtime: nodejs14.x  # Usamos Node.js 14.x
+  runtime: nodejs16.x  # Usamos Node.js 14.x
   iam:
     role: arn:aws:iam::399737753482:role/LabRole  # Aquí se asigna el ARN del rol LabRole
 
