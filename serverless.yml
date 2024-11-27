@@ -34,7 +34,7 @@ resources:
 
 functions:
   CrearDestino:
-    handler: crearDestino.handler
+    handler: CrearDestino.handler
     events:
       - http:
           path: /destinos
