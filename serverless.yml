@@ -3,14 +3,16 @@ service: api-destino
 
 provider:
   name: aws
-  runtime: nodejs14.x  # Usando Node.js 14.x
-  region: us-east-1
+  runtime: nodejs14.x  # Usamos Node.js 14.x
+  iam:
+    role: arn:aws:iam::399737753482:role/LabRole  # Aquí se asigna el ARN del rol LabRole
+
   environment:
     DESTINOS_TABLE: ${self:custom.tables.destinos}
 
 custom:
   tables:
-    destinos: t_destinos  # Asegúrate de que la tabla DynamoDB se llame t_destinos
+    destinos: t_destinos  # Nombre de la tabla DynamoDB para destinos
 
 resources:
   Resources:
