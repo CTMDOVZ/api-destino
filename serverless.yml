@@ -41,7 +41,7 @@ functions:
           method: post
           cors: true
 
-  delete_destino:
+  EliminarDestino:
     handler: eliminarDestino.handler
     events:
       - http:
@@ -49,7 +49,7 @@ functions:
           method: delete
           cors: true
 
-  update_destino:
+  ModificarDestino:
     handler: modificarDestino.handler
     events:
       - http:
@@ -57,7 +57,7 @@ functions:
           method: put
           cors: true
 
-  get_destino_by_id:
+  ObtenerDestinoById:
     handler: obtenerDestinoById.handler
     events:
       - http:
@@ -65,7 +65,7 @@ functions:
           method: get
           cors: true
 
-  get_all_destinos:
+  ObtenerDestino:
     handler: obtenerDestinos.handler
     events:
       - http:
